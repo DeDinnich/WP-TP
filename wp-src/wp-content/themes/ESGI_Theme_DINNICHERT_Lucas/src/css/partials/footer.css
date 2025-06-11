@@ -1,0 +1,22 @@
+:root {
+  --dark-blue: #001f3f;
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.footer-logo .logo-dot {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer a {
+  text-decoration: none;
+}

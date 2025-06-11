@@ -1,0 +1,22 @@
+/*
+Theme Name: ESGI-Theme DINNICHERT Lucas
+Theme URI: https://lucas-dinnichert.fr
+Author: DINNICHERT Lucas
+Author URI: https://lucas-dinnichert.fr
+Description: Thème WordPress custom pour le projet ESGI 2025.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ESGI_Theme_DINNICHERT_Lucas
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  width: 100%;
+  overflow-x: hidden; /* pour éviter les débordements horizontaux */
+}
+
+.d-none {
+  display: none !important;
+}

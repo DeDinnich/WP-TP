@@ -1,0 +1,7 @@
+[11-Jun-2025 21:51:37 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:52:06 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:52:10 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:53:50 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:57:17 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:57:47 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[11-Jun-2025 21:57:55 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926

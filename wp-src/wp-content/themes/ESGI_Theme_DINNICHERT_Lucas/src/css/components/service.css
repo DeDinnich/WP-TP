@@ -1,0 +1,23 @@
+.services-title,
+.partners-title {
+  font-size: 2rem;
+  color: #0c1249;
+  font-weight: bold;
+}
+
+.service-label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #0c1249;
+  position: relative;
+  display: inline-block;
+}
+
+.service-label::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, yellow, orange, deeppink);
+  margin-top: 5px;
+}

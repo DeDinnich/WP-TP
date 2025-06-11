@@ -1,0 +1,70 @@
+:root {
+  --gradient: linear-gradient(to right, yellow, orange, deeppink);
+    --dark-blue: #001f3f;
+
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo-dot {
+  font-size: 1.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: white;
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background: white;
+}
+
+.mobile-menu {
+background-color: var(--dark-blue);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.mobile-menu.open {
+  display: block !important;
+  max-height: 60vh;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.mobile-menu li.active > a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--gradient);
+  width: 100%;
+  margin-top: 4px;
+}

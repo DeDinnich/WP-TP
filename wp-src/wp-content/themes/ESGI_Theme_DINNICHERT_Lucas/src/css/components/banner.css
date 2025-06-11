@@ -1,0 +1,11 @@
+.banner-title {
+  font-size: 2rem;
+  color: #0c1249;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.banner-img {
+  max-width: 80%;
+}

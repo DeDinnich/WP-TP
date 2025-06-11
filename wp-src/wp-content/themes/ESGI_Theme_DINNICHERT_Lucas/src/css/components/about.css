@@ -1,0 +1,26 @@
+.about-title {
+  font-size: 2rem;
+  color: #0c1249;
+  font-weight: bold;
+  margin-left: 25%;
+}
+
+.about-subtitle {
+    color: #888;
+    max-width: 40%;
+    margin-left: 25%;
+    word-wrap: break-word;
+}
+
+.about-block-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0c1249;
+}
+
+.about-block-text {
+  color: #666;
+  font-size: 0.95rem;
+  max-width: 70%;
+  word-wrap: break-word;
+}
