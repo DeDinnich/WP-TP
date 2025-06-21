@@ -1,0 +1,43 @@
+/* Liens du blog */
+.blog-page a,
+.single-post a,
+.blog-sidebar a,
+.blog-posts a,
+.blog-page .pagination a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.blog-page a:hover,
+.single-post a:hover,
+.blog-sidebar a:hover,
+.blog-posts a:hover,
+.blog-page .pagination a:hover {
+  color: var(--dark-blue); /* ou une couleur personnalisée */
+}
+
+.blog-thumb-wrapper {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.blog-thumb-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-thumb-wrapper {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.post-thumb-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

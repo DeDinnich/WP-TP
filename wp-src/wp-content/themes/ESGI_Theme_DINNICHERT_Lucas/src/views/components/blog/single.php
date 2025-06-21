@@ -3,8 +3,8 @@
         <div class="col-12">
             <article class="single-post mb-5">
                 <?php if (has_post_thumbnail()) : ?>
-                    <div class="mb-4">
-                        <img src="<?php the_post_thumbnail_url('large'); ?>" class="img-fluid w-100" alt="<?php the_title(); ?>">
+                    <div class="post-thumb-wrapper mb-4">
+                        <img src="<?= the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
                     </div>
                 <?php endif; ?>
 

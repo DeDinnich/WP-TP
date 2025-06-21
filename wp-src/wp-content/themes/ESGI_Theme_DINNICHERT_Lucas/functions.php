@@ -21,6 +21,7 @@ function esgi_enqueue_assets() {
     wp_enqueue_style('banner-style', $theme_uri . '/src/css/components/banner.css', [], '1.0');
     wp_enqueue_style('service-style', $theme_uri . '/src/css/components/service.css', [], '1.0');
     wp_enqueue_style('partners-style', $theme_uri . '/src/css/components/partners.css', [], '1.0');
+    wp_enqueue_style('contact-style', $theme_uri . '/src/css/pages/blog.css', [], '1.0');
 
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', [], null, true);
     wp_enqueue_script('header-script', $theme_uri . '/src/js/partials/header.js', [], '1.0', true);
