@@ -57,7 +57,7 @@ background-color: var(--dark-blue);
 
 .mobile-menu.open {
   display: block !important;
-  max-height: 60vh;
+  max-height: 65vh;
 }
 
 .subtitle {
