@@ -10,14 +10,14 @@
     <?php endif; ?>
 
     <?php if ($text) : ?>
-        <p class="text-start mb-0 ms-4"><?= nl2br(esc_html($text)) ?></p>
+        <p class="text-start mb-3 ms-4" style="width: 50%;"><?= nl2br(esc_html($text)) ?></p>
     <?php endif; ?>
 
     <?php if ($image) : ?>
         <div class="text-center">
             <img src="<?= esc_url($image) ?>"
                  alt="<?= esc_attr($title ?: 'Illustration') ?>"
-                 class="img-fluid" style="max-width: 100%; height: auto;">
+                 class="img-fluid mt-5" style="max-width: 100%; height: auto;">
         </div>
     <?php endif; ?>
 </section>

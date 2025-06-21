@@ -1,0 +1,16 @@
+/* Appliquer uniquement à cette page */
+body.page-template-partners-page {
+  overflow-y: auto;
+}
+
+/* Wrapper principal */
+.partners-page-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Centrage visuel du composant partenaires si nécessaire */
+.partners-page-wrapper .partners {
+  width: 100%;
+  max-width: 1200px;
+}

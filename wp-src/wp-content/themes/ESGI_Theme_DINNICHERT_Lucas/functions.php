@@ -20,6 +20,7 @@ function esgi_enqueue_assets() {
     wp_enqueue_style('about-style', $theme_uri . '/src/css/components/about.css', [], '1.0');
     wp_enqueue_style('banner-style', $theme_uri . '/src/css/components/banner.css', [], '1.0');
     wp_enqueue_style('service-style', $theme_uri . '/src/css/components/service.css', [], '1.0');
+    wp_enqueue_style('partners-style', $theme_uri . '/src/css/components/partners.css', [], '1.0');
 
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', [], null, true);
     wp_enqueue_script('header-script', $theme_uri . '/src/js/partials/header.js', [], '1.0', true);
@@ -149,17 +150,26 @@ function esgi_customize_register($wp_customize) {
 
     // SECTION PARTNERS
     $wp_customize->add_section('esgi_partners_section', [
-        'title' => __('Section "Our Partners"', 'esgi'),
+        'title'    => __('Section "Our Partners"', 'esgi'),
         'priority' => 40,
     ]);
 
     for ($i = 1; $i <= 6; $i++) {
-        $wp_customize->add_setting("esgi_partner_logo_$i", ['default' => '', 'transport' => 'refresh']);
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "esgi_partner_logo_{$i}_control", [
-            'label' => __("Logo partenaire $i", 'esgi'),
-            'section' => 'esgi_partners_section',
-            'settings' => "esgi_partner_logo_$i",
-        ]));
+        $wp_customize->add_setting("esgi_partner_logo_$i", [
+            'default'   => '',
+            'transport' => 'refresh',
+        ]);
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            "esgi_partner_logo_{$i}_control",
+            [
+                'label'    => __("Logo partenaire $i", 'esgi'),
+                'section'  => 'esgi_partners_section',
+                'settings' => "esgi_partner_logo_$i",
+                'mime_type'=> 'image', // prend en charge svg si autorisé
+            ]
+        ));
     }
 
     // === SECTION FOOTER ===
@@ -224,6 +234,26 @@ function esgi_customize_register($wp_customize) {
         'type' => 'url',
         'priority' => 31,
     ]);
+
+    // Logo SVG LinkedIn
+    $wp_customize->add_setting('esgi_footer_linkedin_icon', ['default' => '', 'transport' => 'refresh']);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'esgi_footer_linkedin_icon_control', [
+        'label' => __('Logo LinkedIn (SVG)', 'esgi'),
+        'section' => 'esgi_footer_section',
+        'settings' => 'esgi_footer_linkedin_icon',
+        'mime_type' => 'image',
+        'priority' => 32,
+    ]));
+
+    // Logo SVG Facebook
+    $wp_customize->add_setting('esgi_footer_facebook_icon', ['default' => '', 'transport' => 'refresh']);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'esgi_footer_facebook_icon_control', [
+        'label' => __('Logo Facebook (SVG)', 'esgi'),
+        'section' => 'esgi_footer_section',
+        'settings' => 'esgi_footer_facebook_icon',
+        'mime_type' => 'image',
+        'priority' => 33,
+    ]));
 
     // Image de la bannière "About Us"
     $wp_customize->add_setting('esgi_about_banner_image', [
@@ -397,3 +427,22 @@ function esgi_customize_register($wp_customize) {
     ]));
 }
 add_action('customize_register', 'esgi_customize_register');
+
+// Autoriser les SVG
+add_filter('upload_mimes', function ($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+});
+
+// Restreindre aux admins (optionnel mais recommandé)
+add_filter('wp_check_filetype_and_ext', function ($file) {
+    if ($file['type'] === 'image/svg+xml' && !current_user_can('manage_options')) {
+        $file['error'] = 'Seuls les administrateurs peuvent envoyer des fichiers SVG.';
+    }
+    return $file;
+});
+
+// Corriger l’affichage des SVG dans l’admin
+add_action('admin_head', function () {
+    echo '<style>.attachment-266x266, .thumbnail img { width: 100% !important; height: auto !important; }</style>';
+});

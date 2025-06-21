@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: #001f3f;
+  --dark-blue: #050A3A;
 }
 
 .bg-dark-blue {
@@ -9,6 +9,7 @@
 .footer-logo {
   font-weight: bold;
   font-size: 2rem;
+  color: white;
 }
 
 .footer-logo .logo-dot {

@@ -1,7 +1,20 @@
 :root {
   --gradient: linear-gradient(to right, yellow, orange, deeppink);
-    --dark-blue: #001f3f;
+    --dark-blue: #050A3A;
 
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, div {
+  font-family: 'Mulish', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #050A3A;
 }
 
 .logo-text {
